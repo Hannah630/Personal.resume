@@ -1,0 +1,20 @@
+.deco-box {
+  height: 240px;
+  width: 240px;
+  background-color: #F8C3CD;
+}
+
+.bg-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.bg-attachment-fixed {
+  background-attachment: fixed;
+}
+
+.object-fit-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
