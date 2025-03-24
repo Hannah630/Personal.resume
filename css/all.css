@@ -7,7 +7,7 @@
 }
 
 .banner {
-  background-image: url("pic/banner.jpg.jpg");
+  background-image: url("../pic/banner.jpg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -17,14 +17,16 @@
   bottom: 30px;
   position: absolute;
   background-attachment: fixed;
+  
 }
 
 @media (max-width: 768px) {
   .banner {
-    background-image: url("pic/banner_mobile.jpg");
+    background-image: url("../pic/banner_mobile.jpg");
     background-attachment: scroll; /* 手機不要用 fixed */
     background-size: cover; /* 或 cover，看你希望縮放還是鋪滿 */
     background-position: center center;
+    max-width: 100%;
   }
 }
 .object-fit-cover {
