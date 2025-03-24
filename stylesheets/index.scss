@@ -12,16 +12,20 @@
     top:30px; left:30px; right:30px; bottom:30px;
     position: absolute;
     background-attachment: fixed;
-    background-attachment: scroll; 
+
     
 }
 @media (max-width: 768px) {
   .banner {
-    background-image: url("../pic/banner_mobile.jpg");
-    background-attachment: scroll; 
-    background-size: cover; 
-    background-position: center center; 
-    max-width: 100%;
+    
+    background-image: url("../pic/banner_mobile.jpg"); /* 手機專用圖片 */
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center ; 
+    top:30px; left:30px; right:30px; bottom:30px;
+    position: absolute;
+    background-attachment: scroll;
+    
   }
 }
 
