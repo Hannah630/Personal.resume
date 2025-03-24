@@ -17,12 +17,13 @@
   bottom: 30px;
   position: absolute;
   background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 @media (max-width: 768px) {
   .banner {
     background-image: url("../pic/banner_mobile.jpg");
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-size: cover;
     background-position: center center;
     max-width: 100%;
