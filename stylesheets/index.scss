@@ -2,15 +2,29 @@
     height: 240px;
     width: 240px;
     background-color: #F8C3CD;
+    position: relative;
 }
-.bg-cover{
+.banner{
+    background-image: url(/pic/banner.jpg.jpg);
     background-repeat: no-repeat; 
     background-size: cover;
     background-position: center center; 
-}
-.bg-attachment-fixed{
+    top:30px; left:30px; right:30px; bottom:30px;
+    position: absolute;
     background-attachment: fixed;
+    
 }
+@media (max-width: 768px) {
+  .banner {
+    background-image: url("/pic/banner_mobile.jpg");
+    background-attachment: scroll; /* 手機不要用 fixed */
+    background-size: cover; /* 或 cover，看你希望縮放還是鋪滿 */
+    background-position: center center; 
+  }
+}
+
+
+
 .object-fit-cover{
     object-fit: cover;}
 
