@@ -6,159 +6,255 @@
     <title>personal.resume</title>
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Bootstrap JavaScript (含 Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 <body>
-    <header class="min-vh-100 position-relative">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          
+          <!-- 左：LOGO（桌面顯示） -->
+          <a class="navbar-brand d-none d-lg-block" href="#">HANNAH</a>
+      
+          <!-- 左：LOGO（手機顯示） -->
+          <a class="navbar-brand d-lg-none" href="#">HANNAH</a>
+      
+          <!-- 手機版的漢堡按鈕 -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <!-- 導覽列 -->
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+            <div class="navbar-nav nav-center">
+              <a class="nav-link" href="#">PROFESSIONAL</a>
+              <a class="nav-link" href="#">PORTFOLIO</a>
+              <a class="nav-link" href="#">EXPERIENCE</a>
+            </div>
+          </div>
+      
+        </div>
+    </nav>
+    
+    <header class="min-vh-100 position-relative header-banner">
         <div class="deco-box position-absolute top-0 start-0"></div>
         <div class="deco-box position-absolute bottom-0 end-0"></div>
-
-        <div class="banner "></div>
+        <div class="overlay"></div><!-- 透明濾鏡 -->
+        <!-- 主要文字 -->
         <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
-            <h1 class="display-1 fw-bold ">黃 鈺晰 </h1>
-            <hr class="mb-3 border-3 opacity-60 mx-n5">
-            <h2>YU-HSI HUANG</h2>
-            <p>人生就像網頁，內容將不斷翻新。</p>
+          <h1 class="display-1 fw-bold">黃 鈺晰</h1>
+          <hr class="mb-3 border-3 opacity-60 mx-n5">
+          <h2>YU-HSI HUANG</h2>
+          <p>人生就像網頁，內容將不斷翻新。</p>
         </div>
     </header>
-    <div class="container py-5">
-        <div class="row justify-content-center flex-md-row-reverse gy-4 gx-6">
+      
+    <div class="parallax-section position-relative">
+        <div class="overlay"></div>
+        <div class="container  position-relative">
+          <div class="row justify-content-center flex-md-row-reverse gy-4 gx-6">
             <div class="col-md-3">
-                <img src="pic/person.jpg.jpg" alt="" class="w-150 object-fit-cover" height="500">
+              <img src="pic/person.jpg.jpg" alt="" class="w-150 object-fit-cover" height="500">
             </div>
-
-            <div class="col-md-5 d-flex align-items-center">
-                <div>
-                <h2 class="display-4"><STrong>ABOUT ME</STrong></h2>
-                <p>嗨，我是 Hannah，一位熱愛視覺與互動之間平衡的前端設計學習者。<br>
-                    曾經我不在這條路上，但因為對「設計出能讓人停下來感受」<br>
-                    這件事深深著迷，我選擇跳脫熟悉的環境，投入前端網頁設計的世界。</p>
-                <p>我喜歡觀察生活中的美感，也熱衷把這份感受轉化成畫面與體驗。<br>
-                    現在的我，正一邊學習技術，一邊嘗試用每個小作品記錄這段旅程。<br>
+            <div class="col-md-5 d-flex align-items-center text-white">
+              <div>
+                <h2 class="display-4"><strong>ABOUT ME</strong></h2>
+                <p>嗨，我是 Hannah，一位熱愛視覺與互動之間平衡的前端設計學習者。
+                    曾經我不在這條路上，但因為對「設計出能讓人停下來感受」這件事深深著迷，
+                    我選擇跳脫熟悉的環境，投入前端網頁設計的世界。</p>
+                <p>我喜歡觀察生活中的美感，也熱衷把這份感受轉化成畫面與體驗。
+                    現在的我，正一邊學習技術，一邊嘗試用每個小作品記錄這段旅程。<hr>
                     這裡，是我邊走邊創作的地方，歡迎你一起感受我的設計節奏。</p>
                 <a href="#" class="btn btn-outline-primary mt-4 w-100">更多內容</a>
-                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="container mt-5">
+            <h2 class="display-5 text-center text-white">PROFESSIONAL</h2>
+            <p class="text-center text-white">MY KNOWLEDGE LEVEL IN SOFTWARE</p>
+          </div>
+          <div class="skill-container mt-2 px-5">
+            <div class="skill">
+              <span>HTML5</span>
+              <div class="bar"><div class="fill" data-width="90%" >90%</div></div>
+            </div>
+            <div class="skill">
+              <span>CSS3</span>
+              <div class="bar"><div class="fill" data-width= "85%">85%</div></div>
+            </div>
+            <div class="skill">
+              <span>JQuery</span>
+              <div class="bar"><div class="fill" data-width= "60%">60%</div></div>
+            </div>
+            <div class="skill">
+              <span>PHOTOSHOP</span>
+              <div class="bar"><div class="fill" data-width= "80%">80%</div></div>
+            </div>
+            <div class="skill">
+              <span>RWD</span>
+              <div class="bar"><div class="fill" data-width= "85%">85%</div></div>
+            </div>
+            <div class="skill">
+              <span>Bootstrap5</span>
+              <div class="bar"><div class="fill" data-width= "95%">95%</div></div>
+            </div>
+          </div>
         </div>
     </div>
 
+    
+      
+      
+    
     <div class="bg-light text-center py-5 m-md-5 p-md-5 ">
-        <div class="container">
-                <h2 class=".display-4.text-center.mb-4">Personal Portfolio</h2>
-        </div>
-        <div class="row row-cols-1 row-cols-lg-3 g-4">
-            <div class="col">
-                <div class="card text-white boder-5 h-100 ">
-                    <img src="pic/card1.jpg.jpg" class="card-img h-100 object-fit-cover" alt="...">
-                    <div class="card-img-overlay bg-dark-gradient " style="top: auto;">
-                      <h5 class="card-title"><strong>工整一致的設計規範</strong></h5>
-                      <p class="card-text">良好的設計不只在於美感，更來自於一致性的細節堆疊。從字體、間距到色彩系統，每一項規範都是為了建立清晰、穩定的視覺節奏，讓使用者在瀏覽時感到自然、舒適，並提升整體使用體驗。</p>
-                      <a href="#" class="btn btn-outline-light w-100 stretched-link">觀看作品</a>
-                    </div>
-                  </div>
+            <div class="container">
+                    <h2 class="display-4 text-center mb-4">Personal Portfolio</h2>
             </div>
-            <div class="col">
-                <div class="card text-white boder-5 h-100 ">
-                <img src="pic/card2.jpg.jpg" class="card-img h-100 object-fit-cover" alt="...">
-                  <div class="card-img-overlay bg-dark-gradient " style="top: auto;">
-                    <h5 class="card-title"><strong>色彩細節苛刻要求</strong></h5>
-                    <p class="card-text">色彩不只是視覺選擇，更是一種情緒語言。每一個色值的微調、明度的拿捏、對比的處理，都是為了在畫面中創造平衡與情感張力。我對色彩的要求不只是和諧，而是讓每一眼都恰到好處，讓使用者在不自覺中感受到設計的用心。</p>
-                    <a href="#" class="btn btn-outline-light w-100 stretched-link">觀看作品</a>
+            <div class="row row-cols-1 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="card text-white boder-5 h-100 ">
+                        <img src="pic/card1.jpg.jpg" class="card-img h-100 object-fit-cover" alt="...">
+                        <div class="card-img-overlay bg-dark-gradient " style="top: auto;">
+                          <h5 class="card-title"><strong>工整一致的設計規範</strong></h5>
+                          <p class="card-text">良好的設計不只在於美感，更來自於一致性的細節堆疊。從字體、間距到色彩系統，每一項規範都是為了建立清晰、穩定的視覺節奏，讓使用者在瀏覽時感到自然、舒適，並提升整體使用體驗。</p>
+                          <a href="https://hannah630.github.io/travel-website/" target="_blank" class="btn btn-outline-light w-100 stretched-link">觀看作品</a>
+                        </div>
+                      </div>
                 </div>
-               </div>
-            </div>
-            <div class="col">
-                <div class="card text-white boder-5 h-100 ">
-                    <img src="pic/card3.jpg.jpg" class="card-img h-100 object-fit-cover " alt="...">
-                    <div class="card-img-overlay bg-dark-gradient " style="top: auto;">
-                        <h5 class="card-title"><strong>精進多項軟體開發</strong></h5>
-                        <p class="card-text">持續涉獵多項相關技術與工具，從 HTML、CSS、JavaScript 到 Bootstrap、jQuery 等框架與設計工具，逐步建立更完整的開發視野。不只是會使用，而是更在意每一項工具背後的邏輯與設計思維，讓我能靈活運用、整合出更高品質的作品。</p>
+                <div class="col">
+                    <div class="card text-white boder-5 h-100 ">
+                    <img src="pic/card2.jpg.jpg" class="card-img h-100 object-fit-cover" alt="...">
+                      <div class="card-img-overlay bg-dark-gradient " style="top: auto;">
+                        <h5 class="card-title"><strong>色彩細節苛刻要求</strong></h5>
+                        <p class="card-text">色彩不只是視覺選擇，更是一種情緒語言。每一個色值的微調、明度的拿捏、對比的處理，都是為了在畫面中創造平衡與情感張力。我對色彩的要求不只是和諧，而是讓每一眼都恰到好處，讓使用者在不自覺中感受到設計的用心。</p>
                         <a href="#" class="btn btn-outline-light w-100 stretched-link">觀看作品</a>
-                     </div>
+                    </div>
+                   </div>
                 </div>
+                <div class="col">
+                    <div class="card text-white boder-5 h-100 ">
+                        <img src="pic/card3.jpg.jpg" class="card-img h-100 object-fit-cover" alt="...">
+                        <div class="card-img-overlay bg-dark-gradient " style="top: auto;">
+                            <h5 class="card-title"><strong>精進多項軟體開發</strong></h5>
+                            <p class="card-text">持續涉獵多項相關技術與工具，從 HTML、CSS、JavaScript 到 Bootstrap、jQuery 等框架與設計工具，逐步建立更完整的開發視野。不只是會使用，而是更在意每一項工具背後的邏輯與設計思維，讓我能靈活運用、整合出更高品質的作品。</p>
+                            <a href="#" class="btn btn-outline-light w-100 stretched-link">觀看作品</a>
+                         </div>
+                    </div>
+            </div>
         </div>
-    </div>
-    <footer class="text-white p-5 mt-3" style="background-color: #9E7A7A;">
-        <div class="container text-center display-4">
-            <h2>CONTACT ME</h2>
-            <div class="row justify-center-center text-start row-cols-1 row-cols-lg-2 gy-5 ">
-                <div class="col-md-5">
-                    <p class="h6 pb-4">Got an idea? <br>Let’s talk. I promise I reply faster than your favorite app.</p>
-                    <div class="pb-4">
-                        <h3 class="h5 ">聯絡方式</h3>
-                        <ul class="list-unstyled h6 lh-base ">
-                        <li><i class="bi bi-envelope me-2"></i>cc20010630@gmail.com</li>
-                        <li><i class="bi bi-telephone me-2"></i>0906200630</li>
+        <footer class="text-white p-5 mt-3" style="background-color: #9E7A7A;">
+            <div class="container text-center display-4">
+                <h2>CONTACT ME</h2>
+                <div class="row justify-center-center text-start row-cols-1 row-cols-lg-2 gy-5 ">
+                    <div class="col-md-5">
+                        <p class="h6 pb-4">Got an idea? <br>Let’s talk. I promise I reply faster than your favorite app.</p>
+                        <div class="pb-4">
+                            <h3 class="h5 ">聯絡方式</h3>
+                            <ul class="list-unstyled h6 lh-base ">
+                            <li><i class="bi bi-envelope me-2"></i>cc20010630@gmail.com</li>
+                            <li><i class="bi bi-telephone me-2"></i>0906200630</li>
+                            </ul>
+                        </div>
+                        
+                        <h3 class="h5">社群關注</h3>
+                        <ul class="list-unstyled h6 lh-base">
+                            <li><i class="bi bi-facebook me-2"></i>黃鈺晰 YU-HSI HUANG</li>
+                            <li><i class="bi bi-instagram me-2"></i>huyuhsi</li>
+                            <li><i class="bi bi-line me-2"></i>yo20170610</li>
                         </ul>
                     </div>
+                    <form class="col-md-5 needs-validation form-small" novalidate>
+                        <div class="row g-2">
+                            <div class="col-md-6">
+                                <label for="validationServer01" class="from-lable">姓氏 *</label>
+                                <input type="text" class="form-control" id="validationServer01" value="HUANG" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="validationServer01" class="from-lable">名 *</label>
+                                <input type="text" class="form-control" id="validationServer01" value="Hannah" required>
+                                <div class="valid-feedback">
+                                    Looks Good!
+                                </div>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label for="exampleFormControlInput1" class="from-lable">Email address</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="cc20010630@gmail.com" required>
+                                <div class="valid-feedback">
+                                    thanks!
+                                </div>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">留言給我吧！</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                              </div>
+                              <div class="mb-3 form-check col-12">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                              </div>
+                              <button type="submit" class="btn btn-primary col-6 ">Submit</button>
+                        </div>
+    
+                    </form>
                     
-                    <h3 class="h5">社群關注</h3>
-                    <ul class="list-unstyled h6 lh-base">
-                        <li><i class="bi bi-facebook me-2"></i>黃鈺晰 YU-HSI HUANG</li>
-                        <li><i class="bi bi-instagram me-2"></i>huyuhsi</li>
-                        <li><i class="bi bi-line me-2"></i>yo20170610</li>
-                    </ul>
+                      
                 </div>
-                <form class="col-md-5 needs-validation form-small" novalidate>
-                    <div class="row g-2">
-                        <div class="col-md-6">
-                            <label for="validationServer01" class="from-lable">姓氏 *</label>
-                            <input type="text" class="form-control" id="validationServer01" value="HUANG" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="validationServer01" class="from-lable">名 *</label>
-                            <input type="text" class="form-control" id="validationServer01" value="Hannah" required>
-                            <div class="valid-feedback">
-                                Looks Good!
-                            </div>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <label for="exampleFormControlInput1" class="from-lable">Email address</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="cc20010630@gmail.com" required>
-                            <div class="valid-feedback">
-                                thanks!
-                            </div>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">留言給我吧！</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                          </div>
-                          <div class="mb-3 form-check col-12">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                          </div>
-                          <button type="submit" class="btn btn-primary col-6 ">Submit</button>
-                    </div>
-
-                </form>
-                
-                  
             </div>
-        </div>
-
-    </footer>
+    
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-// Example starter JavaScript for disabling form submissions if there are invalid fields
         (function () {
-        'use strict'
-
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.querySelectorAll('.needs-validation')
-
-        // Loop over them and prevent submission
-        Array.prototype.slice.call(forms)
-            .forEach(function (form) {
+          'use strict'
+      
+          // Bootstrap 表單驗證
+          var forms = document.querySelectorAll('.needs-validation')
+          Array.prototype.slice.call(forms).forEach(function (form) {
             form.addEventListener('submit', function (event) {
-                if (!form.checkValidity()) {
+              if (!form.checkValidity()) {
                 event.preventDefault()
                 event.stopPropagation()
-                }
-
-                form.classList.add('was-validated')
+              }
+              form.classList.add('was-validated')
             }, false)
-            })
-        })()
-    </script>
+          })
+        })();
+      
+        // jQuery ready 中處理技能條動畫
+        $(document).ready(function () {
+          function isInViewport(element) {
+            const top = $(element).offset().top;
+            const bottom = top + $(element).outerHeight();
+            const scrollTop = $(window).scrollTop();
+            const windowHeight = $(window).height();
+      
+            return bottom > scrollTop && top < (scrollTop + windowHeight);
+          }
+      
+          function checkSkillsInView() {
+            $('.fill').each(function () {
+              const $this = $(this);
+              if (isInViewport($this) && !$this.hasClass('animated')) {
+                const width = $this.data('width');
+                $this.css({
+                  'transition': 'width 2s ease',
+                  'width': width
+                });
+                $this.addClass('animated'); // 避免重複動畫
+              }
+            });
+          }
+      
+          // 監聽滾動與載入事件
+          $(window).on('scroll load', checkSkillsInView);
+        });
+      </script>
+      
+   
 
 </body>
 </html>

@@ -1,35 +1,81 @@
+.nav-center {
+  display: flex;
+  gap: 40px;             /* 控制選單間距 */
+  max-width: 600px;      /* 控制最大寬度 */
+  width: 100%;
+  justify-content: center;
+}
 .deco-box{
-    height: 240px;
-    width: 240px;
-    background-color: #F8C3CD;
+    height: 235px;
+    width: 235px;
+    background-color: rgba(215, 196, 187, 0.4);
     position: relative;
 }
-.banner{
-    background-image: url("../pic/banner.jpg.jpg");
-    background-repeat: no-repeat; 
-    background-size: cover;
-    background-position: center center; 
-    top:30px; left:30px; right:30px; bottom:30px;
-    position: absolute;
-    background-attachment: fixed;
-
-    
+.header-banner {
+  background-image: url("../pic/banner.jpg.jpg");
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-position: center center; 
+  background-attachment: fixed;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
 }
+
 @media (max-width: 768px) {
-  .banner {
-    
-    background-image: url("../pic/banner_mobile.jpg"); /* 手機專用圖片 */
-    background-repeat: no-repeat; 
-    background-size: cover;
-    background-position: center ; 
-    top:30px; left:30px; right:30px; bottom:30px;
-    position: absolute;
+  .header-banner {
+    background-image: url("../pic/banner_mobile.jpg");
     background-attachment: scroll;
-    
   }
 }
+/* deco-box 保持原來位置，這樣會在背景圖上顯示 */
+.deco-box {
+  z-index: 1;
+}
+/* overlay 半透明層 */
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+/* 文字內容 */
+.header-banner .text-center {
+  position: relative;
+  z-index: 3;
+}
+/* 最底層：裝飾方塊 */
+.deco-box {
+  z-index: 1;
+}
+/* 背景圖 */
+.banner {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../pic/banner.jpg.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 2;
+}
 
-
+/* 半透明遮罩 */
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+/* 文字內容 */
+.header-banner .text-center {
+  z-index: 3;
+  position: relative;
+}
 
 .object-fit-cover{
     object-fit: cover;}
@@ -40,17 +86,95 @@
 .custom-form-width {
     max-width: 200px; /* 自訂最大寬度，你也可以設成 350px、450px 看效果 */
   }
-  .form-small {
+.form-small {
     font-size: 14px; /* 或你想要的字體大小 */
   }
-  .form-small input,
-  .form-small textarea,
-  .form-small label,
-  .form-small .form-check-label,
-  .form-small .valid-feedback,
-  .form-small .btn {
+.form-small input,
+.form-small textarea,
+.form-small label,
+.form-small .form-check-label,
+.form-small .valid-feedback,
+.form-small .btn {
     font-size: 14px;
-  }
-  .form-small label{
+}
+.form-small label{
     margin-bottom: 4px;
+}
+
+.parallax-section {
+  position: relative;
+  background-image: url("../pic/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  overflow: hidden;
+}
+  
+  /* 🔥 透明色遮罩層 */
+.parallax-section .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:  rgba(0, 0, 0, 0.5); 
+  z-index: 1;
+  pointer-events: none;
+}
+  
+  /* 🔝 內容保持在最上層 */
+.parallax-section .container {
+  position: relative;
+  z-index: 2;
+  color: #fff; /* 或其他你想要的文字色 */
+}
+@media (max-width: 767.98px) {
+  .parallax-section .container {
+    margin-top: -6rem; /* 視覺上往上靠 */
+    padding-top: 0;     /* 移除可能的內距 */
   }
+}
+
+.skill-container {
+  max-width: 700px;
+  margin: 0 auto;
+  color:#fff;
+  font-family: sans-serif;
+}
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* 控制技能文字與進度條間距 */
+  margin-bottom: 15px;
+  flex-wrap: wrap; /* 手機版自動換行 */
+}
+.skill span {
+  min-width: 120px; /* 固定技能名稱寬度 */
+  font-weight: bold;
+  font-size: 14px;
+}
+  
+.bar {
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  flex: 1;
+ }
+  
+.fill {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(to right, #dbcfc2, #d3b8a1);
+  text-align: right;
+  padding-right: 10px;
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+  color: #5a4333;
+}
+  
+ 
+  
