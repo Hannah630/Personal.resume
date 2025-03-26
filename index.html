@@ -6,6 +6,7 @@
     <title>personal.resume</title>
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Bootstrap JavaScript (含 Popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -48,7 +49,7 @@
           <h1 class="display-1 fw-bold">黃 鈺晰</h1>
           <hr class="mb-3 border-3 opacity-60 mx-n5">
           <h2>YU-HSI HUANG</h2>
-          <p>人生就像網頁，內容將不斷翻新。</p>
+          <p data-aos="zoom-in">人生就像網頁，內容將不斷翻新。</p>
         </div>
     </header>
       
@@ -57,9 +58,9 @@
         <div class="container  position-relative">
           <div class="row justify-content-center flex-md-row-reverse gy-4 gx-8">
             <div class="col-md-3  d-flex justify-content-center align-items-center">
-              <img src="pic/person.jpg.jpg" alt="" class="img-fluid " style="max-width: 250px; height: auto;">
+              <img src="pic/person.jpg.jpg" alt="" class="img-fluid " style="max-width: 250px; height: auto;" data-aos="fade-in">
             </div>
-            <div class="col-md-5 d-flex align-items-center text-white ">
+            <div class="col-md-5 d-flex align-items-center text-white "data-aos="fade-up">
               <div>
                 <h2 class="display-4"><strong>ABOUT ME</strong></h2>
                 <p>嗨，我是 Hannah，一位熱愛視覺與互動之間平衡的前端設計學習者。
@@ -74,7 +75,7 @@
           </div>
 
           <div class="container mt-5">
-            <h2 class="display-5 text-center text-white">PROFESSIONAL</h2>
+            <h2 class="display-5 text-center text-white" data-aos="zoom-in">PROFESSIONAL</h2>
             <p class="text-center text-white">MY KNOWLEDGE LEVEL IN SOFTWARE</p>
           </div>
           <div class="skill-container mt-2 px-5">
@@ -251,6 +252,13 @@
       
           // 監聽滾動與載入事件
           $(window).on('scroll load', checkSkillsInView);
+        });
+      </script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init({
+          once: true,       // 只執行一次
+          duration: 2000,   // 動畫持續時間（ms）
         });
       </script>
       
