@@ -156,7 +156,7 @@
             </div>
           </div>
         
-          <div class="timeline-item right" data-aos="fade-left" data-aos-delay="200">
+          <div class="timeline-item right" data-aos="fade-left" data-aos-delay="50">
             <div class="timeline-content">
               <h5 class="text-success">2020 – 2024</h5>
               <h4>UnderGraduate Degree</h4>
@@ -165,7 +165,7 @@
             </div>
           </div>
     
-          <div class="timeline-item left" data-aos="fade-right"data-aos-delay="400">
+          <div class="timeline-item left" data-aos="fade-right"data-aos-delay="100">
             <div class="timeline-content">
               <h5 class="text-success">2022– 2023</h5>
               <h4>WORK SHOP</h4>
@@ -174,16 +174,16 @@
             </div>
           </div>
 
-          <div class="timeline-item right" data-aos="fade-left" data-aos-delay="600">
+          <div class="timeline-item right" data-aos="fade-left" data-aos-delay="150">
             <div class="timeline-content">
-              <h5 class="text-success">2020 – 2024</h5>
+              <h5 class="text-success">2023 – 2024</h5>
               <h4>InternShip</h4>
               <p class="mb-1">美力絲國際企劃股份有限公司</p>
               <p>Developed creative strategies and oversaw brand system redesign.</p>
             </div>
           </div>
 
-          <div class="timeline-item left" data-aos="fade-right" data-aos-delay="800">
+          <div class="timeline-item left" data-aos="fade-right" data-aos-delay="200">
             <div class="timeline-content">
               <h5 class="text-success">2024 – 2025</h5>
               <h4>Web Design</h4>
@@ -201,7 +201,7 @@
            
    
    
-        <footer class="text-white p-5 mt-3" style="background-color: #9E7A7A;">
+    <footer class="text-white p-5 mt-3" style="background-color: #9E7A7A;">
             <div class="container text-center display-4">
                 <h2>CONTACT ME</h2>
                 <div class="row justify-center-center text-start row-cols-1 row-cols-lg-2 gy-5 ">
@@ -259,65 +259,67 @@
                 </div>
             </div>
     
-        </footer>
+    </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      (function () {
-        'use strict'
+    <!-- ✅ jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-        // ✅ Bootstrap 表單驗證
-        var forms = document.querySelectorAll('.needs-validation')
-        Array.prototype.slice.call(forms).forEach(function (form) {
-          form.addEventListener('submit', function (event) {
-            if (!form.checkValidity()) {
-              event.preventDefault()
-              event.stopPropagation()
-            }
-            form.classList.add('was-validated')
-          }, false)
-        })
-      })();
-
-      // ✅ 檢查是否在畫面中
-      function isInViewport(element) {
-        const top = $(element).offset().top;
-        const bottom = top + $(element).outerHeight();
-        const scrollTop = $(window).scrollTop();
-        const windowHeight = $(window).height();
-        return bottom > scrollTop && top < (scrollTop + windowHeight);
-      }
-
-      // ✅ 技能條動畫（每次進畫面就重新觸發）
-      $(window).on('scroll load', function () {
-        $('.fill').each(function () {
-          const $this = $(this);
-          const width = $this.data('width');
-
-          // ✅ 如果進入畫面且寬度為 0（尚未動畫）
-          if (isInViewport($this) && $this.width() === 0) {
-            setTimeout(() => {
-              $this.css({
-                transition: 'width 2s ease',
-                width: width
-              });
-            }, 50);
-          }
-        });
-      });
+<!-- ✅ AOS 動畫套件 -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // ✅ 初始化 AOS，只播放一次動畫
+  AOS.init({
+    once: true,           // ✔️ 滾動只播放一次
+    duration: 1500,       // ✔️ 動畫持續時間（ms）
+    easing: 'ease-in-out' // ✔️ 動畫節奏（可選）
+  });
 </script>
 
+<!-- ✅ 你自訂的腳本 -->
+<script>
+  (function () {
+    'use strict';
 
-      </script>
-      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-      <script>
-        AOS.init({
-          once: false ,       
-          duration: 2000,   // 動畫持續時間（ms）
+    // ✅ Bootstrap 表單驗證
+    var forms = document.querySelectorAll('.needs-validation');
+    Array.prototype.slice.call(forms).forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  })();
+
+  // ✅ 檢查元素是否在畫面中
+  function isInViewport(element) {
+    const top = $(element).offset().top;
+    const bottom = top + $(element).outerHeight();
+    const scrollTop = $(window).scrollTop();
+    const windowHeight = $(window).height();
+    return bottom > scrollTop && top < (scrollTop + windowHeight);
+  }
+
+  // ✅ 技能條動畫（只播放一次）
+  $(window).on('scroll load', function () {
+    $('.fill').each(function () {
+      const $this = $(this);
+      const width = $this.data('width');
+
+      // 如果在畫面中且尚未播放過動畫
+      if (isInViewport($this) && !$this.hasClass('animated')) {
+        $this.css({
+          transition: 'width 1s ease',
+          width: width
         });
-      </script>
-      
-   
+        $this.addClass('animated'); // 標記為已播放
+      }
+    });
+  });
+</script>
+
 
 </body>
 </html>
