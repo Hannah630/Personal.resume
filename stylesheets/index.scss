@@ -376,7 +376,7 @@ html {
 }
 .contact-box-section {
   position: relative;
-  background-image: url('../pic/bg3.jpg'); /* 如果你有背景圖就加 */
+  background-image: url('../pic/bg3.jpg'); 
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* 視差效果 */
@@ -388,7 +388,7 @@ html {
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(142, 109, 109, 0.5); /* 半透明奶茶咖啡色 */
+  background-color:rgba(0, 0, 0, 0.1); 
   backdrop-filter: blur(3px);
   z-index: 1;
 }
@@ -401,20 +401,18 @@ html {
 }
 @media (max-width: 768px) {
   .contact-box-section .overlay {
-    background-color: rgba(142, 109, 109, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
   }
 }
 .footer-custom {
-  background-color: #2e3440; /* 深灰藍色，可自調 */
-  color: #fff;
+  background-color: 	#1C1F22;
 }
 
 .circle-logo {
   width: 28px;
   height: 28px;
-  border: 2px solid 	#a3876a;  /* 螢光綠 */
-  color: 	#a3876a;
+  border: 2px solid	#DAA520; 
   border-radius: 50%;
   font-weight: bold;
   font-size: 14px;
