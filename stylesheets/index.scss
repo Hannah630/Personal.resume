@@ -1,7 +1,8 @@
 html {
   scroll-behavior: smooth;
 }
-/* 中文名字 */
+
+// 中文名字
 .hero-title-ch {
   font-family: 'Noto Sans TC', sans-serif;
   font-weight: 700;
@@ -9,7 +10,7 @@ html {
   letter-spacing: 4px;
 }
 
-/* 英文名字 */
+// 英文名字
 .hero-title-en {
   font-family: 'DM Sans', sans-serif;
   font-weight: 500;
@@ -19,7 +20,7 @@ html {
   white-space: nowrap;
 }
 
-/* 小標語 */
+// 小標語
 .hero-subtext {
   font-family: 'DM Sans', sans-serif;
   font-size: 1rem;
@@ -28,111 +29,95 @@ html {
   margin-top: 0.5rem;
   white-space: nowrap;
 }
+
+// 導覽列置中
 .nav-center {
   display: flex;
-  gap: 40px;             /* 控制選單間距 */
-  max-width: 600px;      /* 控制最大寬度 */
+  gap: 40px;
+  max-width: 600px;
   width: 100%;
   justify-content: center;
 }
-.deco-box{
-    height: 235px;
-    width: 235px;
-    background-color: rgba(215, 196, 187, 0.4);
-    position: relative;
+
+// 裝飾方塊
+.deco-box {
+  height: 235px;
+  width: 235px;
+  background-color: rgba(215, 196, 187, 0.4);
+  position: relative;
+  z-index: 1;
 }
+
+// banner 區塊
 .header-banner {
   background-image: url("../pic/banner.jpg.jpg");
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center; 
+  background-position: center center;
   background-attachment: fixed;
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-}
 
-@media (max-width: 768px) {
-  .header-banner {
+  .text-center {
+    position: relative;
+    z-index: 3;
+  }
+
+  @media (max-width: 768px) {
     background-image: url("../pic/banner_mobile.jpg");
     background-attachment: scroll;
   }
 }
-/* deco-box 保持原來位置，這樣會在背景圖上顯示 */
-.deco-box {
-  z-index: 1;
-}
-/* overlay 半透明層 */
+
+
+
+// 半透明遮罩
 .overlay {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 2;
 }
-/* 文字內容 */
-.header-banner .text-center {
-  position: relative;
-  z-index: 3;
-}
-/* 最底層：裝飾方塊 */
-.deco-box {
-  z-index: 1;
-}
-/* 背景圖 */
-.banner {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('../pic/banner.jpg.jpg') no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
-  z-index: 2;
+
+// 元件工具類別
+.object-fit-cover {
+  object-fit: cover;
 }
 
-/* 半透明遮罩 */
-.overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 2;
-}
-/* 文字內容 */
-.header-banner .text-center {
-  z-index: 3;
-  position: relative;
+.bg-dark-gradient {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
 }
 
-.object-fit-cover{
-    object-fit: cover;}
-
-.bg-dark-gradient{
-    background-image: linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,0.8));
-}
-.custom-form-width {
-    max-width: 200px; /* 自訂最大寬度，你也可以設成 350px、450px 看效果 */
-  }
-.form-small {
-    font-size: 14px; /* 或你想要的字體大小 */
-  }
-.form-small input,
-.form-small textarea,
-.form-small label,
-.form-small .form-check-label,
-.form-small .valid-feedback,
-.form-small .btn {
-    font-size: 14px;
-}
-.form-small label{
-    margin-bottom: 4px;
-}
 .text-glow {
   text-shadow: 0 3px 8px rgba(0, 0, 0, 1);
 }
+
+// 表單樣式
+.custom-form-width {
+  max-width: 200px; // 可調成 350px、450px
+}
+
+.form-small {
+  font-size: 14px;
+
+  input,
+  textarea,
+  label,
+  .form-check-label,
+  .valid-feedback,
+  .btn {
+    font-size: 14px;
+  }
+
+  label {
+    margin-bottom: 4px;
+  }
+}
+
 .parallax-section {
   position: relative;
   background-image: url("../pic/bg.jpg");
@@ -142,238 +127,257 @@ html {
   background-repeat: no-repeat;
   padding: 100px 0;
   overflow: hidden;
-}
-  
-  /* 🔥 透明色遮罩層 */
-.parallax-section .overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(3px);
-  z-index: 1;
-  pointer-events: none;
-}
-  
-  /* 🔝 內容保持在最上層 */
-.parallax-section .container {
-  position: relative;
-  z-index: 2;
-  color: #fff; /* 或其他你想要的文字色 */
-}
-@media (max-width: 767.98px) {
-  .parallax-section .container {
-    margin-top: -6rem; /* 視覺上往上靠 */
-    padding-top: 0;     /* 移除可能的內距 */
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); // 🔥 黑色遮罩
+    backdrop-filter: blur(3px);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+
+    @media (max-width: 767.98px) {
+      margin-top: -6rem;
+      padding-top: 0;
+    }
   }
 }
-.section-gap{
+
+// 區塊垂直留白
+.section-gap {
   margin-top: 100px;
 }
+
+// 技能條容器
 .skill-container {
   max-width: 700px;
   margin: 0 auto;
-  color:#fff;
+  color: #fff;
   font-family: sans-serif;
-}
-.skill {
-  display: flex;
-  align-items: center;
-  gap: 1rem; /* 控制技能文字與進度條間距 */
-  margin-bottom: 15px;
-  flex-wrap: wrap; /* 手機版自動換行 */
-}
-.skill span {
-  min-width: 120px; /* 固定技能名稱寬度 */
-  font-weight: bold;
-  font-size: 14px;
-}
-  
-.bar {
-  background-color: rgba(255, 255, 255, 0.2);
-  height: 20px;
-  border-radius: 5px;
-  overflow: hidden;
-  flex: 1;
- }
-  
-.fill {
-  width: 0;
-  height: 100%;
-  background: linear-gradient(to right, #dbcfc2, #d3b8a1);
-  text-align: right;
-  padding-right: 10px;
-  line-height: 20px;
-  font-size: 12px;
-  font-weight: bold;
-  border-radius: 5px;
-  color: #5a4333;
+
+  .skill {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+
+    span {
+      min-width: 120px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .bar {
+      background-color: rgba(255, 255, 255, 0.2);
+      height: 20px;
+      border-radius: 5px;
+      overflow: hidden;
+      flex: 1;
+
+      .fill {
+        width: 0; // 透過 JS 動態控制進度條
+        height: 100%;
+        background: linear-gradient(to right, #dbcfc2, #d3b8a1);
+        text-align: right;
+        padding-right: 10px;
+        line-height: 20px;
+        font-size: 12px;
+        font-weight: bold;
+        border-radius: 5px;
+        color: #5a4333;
+      }
+    }
+  }
 }
 
 .project-gallery {
   position: relative;
-  background-image: url('../pic/bg2.jpg'); 
+  background-image: url('../pic/bg2.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   min-height: 200vh;
   overflow: hidden;
-}
 
-.bg-img-overlay {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(255, 255, 255, 0.2);/* 黑色半透明遮罩 */
-  z-index: 1;
-}
+  .bg-img-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.2); // 淡白遮罩
+    z-index: 1;
 
-.project-card {
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
+    @media (max-width: 768px) {
+      background-attachment: scroll;
+      background-image: url('../pic/bg2-mobile.jpg');
+  
+      .bg-img-overlay {
+        background-color: rgba(255, 255, 255, 0.01); // 手機版更淡
+      }
+    }
+  }
 
-.project-card:hover {
-  transform: scale(1.03);
-}
+  .project-card {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); // 微陰影立體感
 
-.project-card .overlay {
-  background: rgba(0, 0, 0, 0.1); /* 遮罩 */
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: background 0.3s ease;
-}
+    &:hover {
+      transform: scale(1.03);
 
-.project-card:hover .overlay {
-  background: rgba(0, 0, 0, 0.1);
-}
+      .overlay {
+        background: rgba(0, 0, 0, 0.25); // hover 時加深透明度
+      }
+    }
 
-.project-title {
-  font-size: 1.25rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin: 0;
-}
+    .overlay {
+      background: rgba(0, 0, 0, 0.1);
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: background 0.3s ease;
+      z-index: 1;
+    }
 
-/* === 時間軸區塊 Timeline === */
+    .project-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 0;
+      color: #fff;
+      z-index: 2;
+    }
+  }
+  }
+
+
+
 .timeline {
   position: relative;
   margin: 0 auto;
   padding: 2rem 0;
   width: 100%;
   max-width: 1000px;
-}
 
-/* 中線 */
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 4px;
-  height: 100%;
-  background-color:	#6B4C3B;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-
-/* 單筆經歷項目 */
-.timeline-item {
-  position: relative;
-  width: 50%;
-  padding: 1rem 1rem;
-  z-index: 2;
-}
-
-/* 左右排版控制 */
-.timeline-item.left {
-  left: 0;
-  text-align: right;
-}
-.timeline-item.right {
-  left: 50%;
-  text-align: left;
-}
-
-/* 綠色圓點 */
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  top: 30px;
-  width: 16px;
-  height: 16px;
-  background-color: 	#6B4C3B;
-  border-radius: 50%;
-  z-index: 3;
-}
-.timeline-item.left::before {
-  right: -8px;
-}
-.timeline-item.right::before {
-  left: -8px;
-}
-
-/* === 經歷內部樣式 === */
-.timeline-content {
-  background:rgba(50, 30, 25, 0.8) ; /* 半透明玻璃感 */
-  padding: 1rem;
-  border-radius: 10px;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  box-shadow: 0 4px 16px rgba(191, 166, 160, 0.1);
-}
-
-.timeline-content h4 {
-  font-size: 1.125rem; /* 約18px */
-}
-.timeline-content p {
-  font-size: 0.85rem;
-  line-height: 1.4;
-}
-.timeline-content h5{
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-}
-
-@media (max-width: 768px) {
-  .timeline::before {
-    left: 2rem;
-    transform: none;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: #6B4C3B;
+    transform: translateX(-50%);
+    z-index: 1;
   }
 
   .timeline-item {
-    width: 100%;
-    left: 0 !important;
-    padding-left: 3rem;
-    padding-right: 1rem;
-    text-align: left !important;
-    margin-bottom: 2rem;
+    position: relative;
+    width: 50%;
+    padding: 1rem;
+    z-index: 2;
+
+    &.left {
+      left: 0;
+      text-align: right;
+    }
+
+    &.right {
+      left: 50%;
+      text-align: left;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      width: 16px;
+      height: 16px;
+      background-color: #6B4C3B;
+      border-radius: 50%;
+      z-index: 3;
+    }
+
+    &.left::before {
+      right: -8px;
+    }
+
+    &.right::before {
+      left: -8px;
+    }
+
+    .timeline-content {
+      background: rgba(50, 30, 25, 0.8);
+      padding: 1rem;
+      border-radius: 10px;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      box-shadow: 0 4px 16px rgba(191, 166, 160, 0.1);
+
+      h4 {
+        font-size: 1.125rem;
+      }
+
+      h5 {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+      }
+    }
   }
 
-  .timeline-item::before {
-    left: 2rem;
-    transform: translateX(-50%); /* ✅ 超準中心對齊 */
-    top: 1rem;
-    width: 16px;
-    height: 16px;
-  }
+  
+  @media (max-width: 768px) {
+    &::before {
+      left: 2rem;
+      transform: none;
+    }
 
-  .timeline-item.left::before,
-  .timeline-item.right::before {
-    left: 2rem !important;
-    right: auto !important;
-    transform: translateX(-50%);
+    .timeline-item {
+      width: 100%;
+      left: 0 !important;
+      padding-left: 3rem;
+      padding-right: 1rem;
+      text-align: left !important;
+      margin-bottom: 2rem;
+
+      &::before {
+        left: 2rem;
+        top: 1rem;
+        width: 16px;
+        height: 16px;
+        transform: translateX(-50%);
+      }
+
+      &.left::before,
+      &.right::before {
+        left: 2rem !important;
+        right: auto !important;
+        transform: translateX(-50%);
+      }
+    }
   }
 }
+
 .contact-box-section {
   position: relative;
   background-image: url('../pic/bg3.jpg'); 
@@ -381,17 +385,26 @@ html {
   background-position: center;
   background-attachment: fixed; /* 視差效果 */
   overflow: hidden;
+  .overlay{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(3px);
+    z-index: 1;
+  }
+  @media (max-width: 768px) {
+    background-image: url('../pic/bg3-mobile.jpg');
+    background-attachment: scroll;
+   
+    & .overlay {
+      background-color: rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(3px);
+    }
+  }
 }
 
-.contact-box-section .overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-color:rgba(0, 0, 0, 0.1); 
-  backdrop-filter: blur(3px);
-  z-index: 1;
-}
 
 .contact-box-inner {
   position: relative;
@@ -399,12 +412,7 @@ html {
   padding: 10px;
   border-radius: 20px;
 }
-@media (max-width: 768px) {
-  .contact-box-section .overlay {
-    background-color: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-  }
-}
+
 .footer-custom {
   background-color: 	#1C1F22;
 }
