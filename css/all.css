@@ -199,12 +199,12 @@ html {
   z-index: 1;
 }
 @media (max-width: 768px) {
-  .project-gallery .bg-img-overlay {
+  .project-gallery {
     background-attachment: scroll;
     background-image: url("../pic/bg2.jpg");
   }
-  .project-gallery .bg-img-overlay .bg-img-overlay {
-    background-color: rgba(255, 255, 255, 0.01);
+  .project-gallery .bg-img-overlay {
+    background-color: rgba(255, 255, 255, 0.05);
   }
 }
 .project-gallery .project-card {
@@ -256,7 +256,7 @@ html {
   left: 50%;
   width: 4px;
   height: 100%;
-  background-color: #6B4C3B;
+  background-color: rgb(30, 50, 80);
   transform: translateX(-50%);
   z-index: 1;
 }
@@ -280,7 +280,7 @@ html {
   top: 30px;
   width: 16px;
   height: 16px;
-  background-color: #6B4C3B;
+  background-color: rgb(30, 50, 80);
   border-radius: 50%;
   z-index: 3;
 }
@@ -291,7 +291,7 @@ html {
   left: -8px;
 }
 .timeline .timeline-item .timeline-content {
-  background: rgba(50, 30, 25, 0.8);
+  background-color: rgba(30, 50, 80, 0.8);
   padding: 1rem;
   border-radius: 10px;
   backdrop-filter: blur(4px);
@@ -350,9 +350,6 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
   z-index: 1;
 }
 @media (max-width: 768px) {
@@ -362,8 +359,6 @@ html {
   }
   .contact-box-section .overlay {
     background-color: rgba(0, 0, 0, 0.05);
-    -webkit-backdrop-filter: blur(3px);
-            backdrop-filter: blur(3px);
   }
 }
 
