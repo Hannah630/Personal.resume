@@ -217,7 +217,7 @@ html {
 
     @media (max-width: 768px) {
       background-attachment: scroll;
-      background-image: url('../pic/bg2-mobile.jpg');
+      background-image: url('../pic/bg2.jpg');
   
       .bg-img-overlay {
         background-color: rgba(255, 255, 255, 0.01); // 手機版更淡
@@ -395,7 +395,7 @@ html {
     z-index: 1;
   }
   @media (max-width: 768px) {
-    background-image: url('../pic/bg3-mobile.jpg');
+    background-image: url('../pic/bg3.jpg');
     background-attachment: scroll;
    
     & .overlay {
