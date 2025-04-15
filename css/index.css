@@ -223,23 +223,21 @@ html {
   background: rgba(0, 0, 0, 0.25);
 }
 .project-gallery .project-card .overlay {
-  background: rgba(0, 0, 0, 0.1);
-  height: 100%;
-  width: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease;
+  padding-bottom: 1rem;
   z-index: 1;
 }
 .project-gallery .project-card .project-title {
   font-size: 1.25rem;
   font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   margin: 0;
-  color: #fff;
-  z-index: 2;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* ← 陰影效果 */
 }
 
 .timeline {
@@ -344,6 +342,10 @@ html {
   background-attachment: fixed; /* 視差效果 */
   overflow: hidden;
 }
+.contact-box-section .contact-box-inner label {
+  color: #111;
+  font-weight: 600;
+}
 .contact-box-section .contact-box-section-overlay {
   position: absolute;
   top: 0;
@@ -371,6 +373,19 @@ html {
 
 .footer-custom {
   background-color: #1C1F22;
+}
+
+.custom-link {
+  color: #212529 !important; /* Bootstrap 的 text-dark */
+  text-decoration: none !important;
+}
+
+.custom-link:visited,
+.custom-link:hover,
+.custom-link:focus,
+.custom-link:active {
+  color: #212529 !important;
+  text-decoration: none !important;
 }
 
 .circle-logo {

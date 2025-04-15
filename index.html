@@ -136,21 +136,21 @@
           <div class="col-md-4 px-3 px-md-0">
             <div class="project-card" style="background-image: url('pic/card1.jpg.jpg');">
               <div class="overlay d-flex align-items-center justify-content-center">
-                <h5 class="project-title">台南府城光彩繡莊</h5>
+                <h5 class="project-title ">台南府城光彩繡莊</h5>
               </div>
             </div>
           </div>
           <div class="col-md-4 px-3 px-md-0">
             <div class="project-card" style="background-image: url('pic/card2.jpg.jpg');">
               <div class="overlay d-flex align-items-center justify-content-center">
-                <h5 class="project-title">NAIL WEB</h5>
+                <h5 class="project-title">NAILWEB美甲工作室</h5>
               </div>
             </div>
           </div>
           <div class="col-md-4 px-3 px-md-0">
             <div class="project-card" style="background-image: url('pic/card3.jpg.jpg');">
               <div class="overlay d-flex align-items-center justify-content-center">
-                <h5 class="project-title">PROJECT 03</h5>
+                <h5 class="project-title ">PROJECT 03</h5>
               </div>
             </div>
           </div>
@@ -214,69 +214,74 @@
     
     </section>
 
-    <section class="contact-box-section py-5 text-white position-relative">
+    <section class="contact-box-section py-5 position-relative">
       <!-- 半透明遮罩層 -->
       <div class="contact-box-section-overlay"></div>
     
       <!-- 真正的內容區塊 -->
-      <div class="container position-relative z-2 contact-box-inner text-dark" style="max-width: 960px;" id="contactme">
-
-        <div class="text-center mb-4  ">
+      <div class="container position-relative z-2 contact-box-inner" style="max-width: 960px;" id="contactme">
+        <div class="text-center mb-4">
           <h2 class="fw-bold display-5">CONTACT ME</h2>
         </div>
     
         <div class="row justify-content-center text-start row-cols-1 row-cols-lg-2 gy-5">
           <!-- 左側聯絡資訊 -->
           <div class="col-md-5" data-aos="fade-right">
-            <p class="h6 pb-4">Got an idea? <br>Let’s talk. I promise I reply faster than your favorite app.</p>
-            <div class="pb-4">
-              <h3 class="h5">聯絡方式</h3>
+            <div class="p-4 rounded-4 shadow-sm" style="background-color: rgba(255, 255, 255, 0.75);">
+              <p class="h6 pb-4">Got an idea?<br>Let’s talk. I promise I reply faster than your favorite app.</p>
+    
+              <div class="pb-4">
+                <h3 class="h5">聯絡方式</h3>
+                <ul class="list-unstyled h6 lh-base">
+                  <li><i class="bi bi-envelope me-2"></i>cc20010630@gmail.com</li>
+                  <li><i class="bi bi-telephone me-2"></i>0906200630</li>
+                </ul>
+              </div>
+    
+              <h3 class="h5">社群關注</h3>
               <ul class="list-unstyled h6 lh-base">
-                <li><i class="bi bi-envelope me-2"></i>cc20010630@gmail.com</li>
-                <li><i class="bi bi-telephone me-2"></i>0906200630</li>
+                <li><i class="bi bi-facebook me-2"></i><a href="#" class="text-dark text-decoration-none">黃鈺晰 YU-HSI HUANG</a></li>
+                <li><i class="bi bi-instagram me-2"></i><a href="https://instagram.com/huyuhsi" target="_blank" class="text-dark text-decoration-none">@huyuhsi</a></li>
+                <li><i class="bi bi-line me-2"></i>yo20170610（Line ID）</li>
               </ul>
             </div>
-    
-            <h3 class="h5">社群關注</h3>
-            <ul class="list-unstyled h6 lh-base">
-              <li><i class="bi bi-facebook me-2"></i><a href="#" class="text-dark text-decoration-none" target="_blank">黃鈺晰 YU-HSI HUANG</a></li>
-              <li><i class="bi bi-instagram me-2"></i><a href="https://instagram.com/huyuhsi" class="text-dark text-decoration-none" target="_blank">@huyuhsi</a></li>
-              <li><i class="bi bi-line me-2"></i>yo20170610（Line ID）</li>
-            </ul>
           </div>
     
           <!-- 右側表單 -->
-          <form action="https://formsubmit.co/cc20010630@gmail.com" method="POST" class="col-md-5 needs-validation form-small" novalidate data-aos="fade-left">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+          <div class="col-md-5" data-aos="fade-left">
+            <form action="https://formsubmit.co/cc20010630@gmail.com" method="POST" class="needs-validation form-small" novalidate>
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
     
-            <div class="row g-2">
-              <div class="col-md-6">
-                <label for="firstName" class="form-label">姓氏 *</label>
-                <input type="text" class="form-control" name="firstName" id="firstName" required>
+              <div class="row g-2">
+                <div class="col-md-6">
+                  <label for="firstName" class="form-label">姓氏 *</label>
+                  <input type="text" class="form-control" name="firstName" id="firstName" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="lastName" class="form-label">名 *</label>
+                  <input type="text" class="form-control" name="lastName" id="lastName" required>
+                </div>
+                <div class="col-12 mb-3">
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="cc20010630@gmail.com" required>
+                </div>
+                <div class="col-12 mb-3">
+                  <label for="message" class="form-label">留言給我吧！</label>
+                  <textarea class="form-control" name="message" id="message" rows="3"></textarea>
+                </div>
+                <div class="mb-3 form-check col-12">
+                  <input type="checkbox" class="form-check-input" id="checkMe">
+                  <label class="form-check-label" for="checkMe">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-dark col-6">Submit</button>
               </div>
-              <div class="col-md-6">
-                <label for="lastName" class="form-label">名 *</label>
-                <input type="text" class="form-control" name="lastName" id="lastName" required>
-              </div>
-              <div class="col-12 mb-3">
-                <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" name="email" id="email" placeholder="cc20010630@gmail.com" required>
-              </div>
-              <div class="col-12 mb-3">
-                <label for="message" class="form-label">留言給我吧！</label>
-                <textarea class="form-control" name="message" id="message" rows="3"></textarea>
-              </div>
-              <div class="mb-3 form-check col-12">
-                <input type="checkbox" class="form-check-input" id="checkMe">
-                <label class="form-check-label" for="checkMe">Check me out</label>
-              </div>
-              <button type="submit" class="btn btn-light col-6">Submit</button>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </section>
+    
     
     <footer class="footer-custom d-flex justify-content-center align-items-center text-white  py-2">
       <!-- 左側：Logo 或字母圈圈 -->
