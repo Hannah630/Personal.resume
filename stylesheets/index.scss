@@ -387,7 +387,7 @@ html {
   background-position: center;
   background-attachment: fixed; /* 視差效果 */
   overflow: hidden;
-  .overlay{
+  .contact-box-section-overlay{
     position: absolute;
     top: 0; left: 0;
     width: 100%;
@@ -399,7 +399,7 @@ html {
     background-attachment: scroll;
     
    
-    & .overlay {
+    & .contact-box-section-overlay {
       background-color: rgba(0, 0, 0, 0.05);
       
     }

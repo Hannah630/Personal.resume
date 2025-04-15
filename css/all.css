@@ -344,7 +344,7 @@ html {
   background-attachment: fixed; /* 視差效果 */
   overflow: hidden;
 }
-.contact-box-section .overlay {
+.contact-box-section .contact-box-section-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -357,7 +357,7 @@ html {
     background-image: url("../pic/bg3.jpg");
     background-attachment: scroll;
   }
-  .contact-box-section .overlay {
+  .contact-box-section .contact-box-section-overlay {
     background-color: rgba(0, 0, 0, 0.05);
   }
 }
