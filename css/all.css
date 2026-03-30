@@ -3,6 +3,11 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --card-accent: #132d26; /* 深綠，和圖片配色更協調 */
+  --card-text-color: #f3e9dc; /* 淺米色文字 */
+}
+
 .hero-title-ch {
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 700;
@@ -146,7 +151,7 @@ html {
 }
 
 .skill-container {
-  max-width: 700px;
+  max-width: 820px;
   margin: 0 auto;
   color: #fff;
   font-family: sans-serif;
@@ -156,31 +161,65 @@ html {
   align-items: center;
   gap: 1rem;
   margin-bottom: 15px;
-  flex-wrap: wrap;
 }
 .skill-container .skill span {
-  min-width: 120px;
-  font-weight: bold;
+  flex: 0 0 220px; /* 固定標籤寬度，確保所有標籤對齊 */
+  font-weight: 700;
   font-size: 14px;
+  line-height: 1.2;
 }
 .skill-container .skill .bar {
-  background-color: rgba(255, 255, 255, 0.2);
-  height: 20px;
-  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.18);
+  height: 26px;
+  border-radius: 13px;
   overflow: hidden;
-  flex: 1;
+  flex: 1 1 auto;
+  display: block;
 }
 .skill-container .skill .bar .fill {
   width: 0;
   height: 100%;
-  background: linear-gradient(to right, #dbcfc2, #d3b8a1);
-  text-align: right;
-  padding-right: 10px;
-  line-height: 20px;
-  font-size: 12px;
-  font-weight: bold;
-  border-radius: 5px;
+  background: linear-gradient(90deg, #dbcfc2 0%, #d3b8a1 100%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 13px;
   color: #5a4333;
+  box-sizing: border-box;
+}
+
+/* 手機與小螢幕：標籤置頂、技能條置下，避免換行導致錯位 */
+@media (max-width: 576px) {
+  .skill-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .skill-container .skill {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .skill-container .skill span {
+    flex: none;
+    min-width: 0;
+    width: 100%;
+  }
+  .skill-container .skill .bar {
+    width: 100%;
+  }
+  .skill-container .skill .bar .fill {
+    padding-right: 10px;
+  }
+}
+
+/* 中等螢幕調整：縮小標籤寬度以避免過度擠壓 */
+@media (min-width: 577px) and (max-width: 992px) {
+  .skill-container .skill span {
+    flex: 0 0 180px;
+  }
 }
 
 .project-gallery {
@@ -196,7 +235,71 @@ html {
   position: absolute;
   inset: 0;
   background-color: rgba(255, 255, 255, 0.2);
-  z-index: 1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 確保上方標題區蓋在背景與遮罩之上（手機也能顯示） */
+.project-gallery .content-on-top {
+  position: relative;
+  z-index: 9999 !important;
+}
+
+/* 把實際包含標題的 container 提升層級，避免內部 inline z-index 蓋到外層遮罩 */
+.project-gallery .content-on-top > .container {
+  position: relative;
+  z-index: 10000 !important;
+}
+
+@media (max-width: 768px) {
+  .project-gallery .content-on-top { z-index: 10000 !important; }
+  .project-gallery .content-on-top > .container { z-index: 10001 !important; }
+}
+/* 為標題區留出空間，避免上方或下方元素在小螢幕時覆蓋或裁切 */
+.project-gallery .content-on-top { padding: 1.25rem 0 1.5rem; }
+.project-gallery > .container.position-relative { margin-top: 0.5rem; }
+@media (max-width: 576px) {
+  .project-gallery .content-on-top { padding: 1.5rem 0 2rem; }
+  .project-gallery > .container.position-relative { margin-top: 2.25rem; }
+  .project-gallery .content-on-top .lead { display: block; color: #fff; opacity: 1; }
+}
+/* 小螢幕：避免標題被上方內容或卡片遮蓋、解除裁切 */
+@media (max-width: 576px) {
+  .project-gallery { overflow: visible; }
+  .project-gallery .content-on-top { padding-top: 2rem; padding-bottom: 2.25rem; overflow: visible; }
+  .project-gallery > .container.position-relative { margin-top: 4rem; }
+  .project-gallery .content-on-top .text-center { position: relative; z-index: 10002 !important; }
+  .project-gallery .content-on-top .text-center h2 {
+    display: block;
+    opacity: 1 !important;
+    transform: none !important;
+    color: #fff !important;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+  }
+  .project-gallery .content-on-top .text-center p.lead {
+    display: block;
+    opacity: 1 !important;
+    transform: none !important;
+    color: #fff !important;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  }
+}
+@media (max-width: 576px) {
+  /* 向下推整個 portfolio 區，避免與上方技能條重疊 */
+  .project-gallery { padding-top: 5.5rem; }
+  .project-gallery > .container.position-relative { margin-top: 0.5rem; }
+}
+/* 強制讓 PORTFOLIO 標題在小螢幕可見，避免被動畫或遮罩隱藏 */
+@media (max-width: 768px) {
+  .project-gallery .content-on-top .text-center { position: relative; z-index: 10002 !important; }
+  .project-gallery .content-on-top .text-center h2,
+  .project-gallery .content-on-top .text-center p {
+    opacity: 1 !important;
+    transform: none !important;
+    color: #fff !important;
+    -webkit-text-stroke: 0.01px rgba(0,0,0,0.3);
+  }
 }
 @media (max-width: 768px) {
   .project-gallery {
@@ -208,37 +311,162 @@ html {
   }
 }
 .project-gallery .project-card {
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
+  border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.3s ease;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 個別卡片：深藍主題（覆蓋白底） */
+.project-gallery .project-card--dark {
+  background-color: #0b2b3a; /* 深藍 */
+}
+.project-gallery .project-card--dark .card-img-top {
+  background: #0b2b3a; /* 圖片區背景 */
+  object-fit: contain;
+  padding: 18px 12px; /* 給圖片些邊距 */
+}
+.project-gallery .project-card--dark .card-body {
+  background: #062029; /* 更深的底欄色，與主色協調 */
 }
 .project-gallery .project-card:hover {
-  transform: scale(1.03);
+  transform: translateY(-6px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.12);
 }
-.project-gallery .project-card:hover .overlay {
-  background: rgba(0, 0, 0, 0.25);
+.project-gallery .project-card .card-img-top {
+  width: 100%;
+  height: 240px; /* 增高圖片，減少被裁切的感覺 */
+  object-fit: cover;
+  display: block;
 }
-.project-gallery .project-card .overlay {
-  position: absolute;
-  inset: 0;
+
+/* SVG logo: 不用 cover（會被裁切），改用 contain 並保留背景 */
+.project-gallery .project-card .card-img-top[src$="繡莊logo.svg"] {
+  object-fit: contain;
+  background: #fff;
+  padding: 18px; /* 給 SVG 一些空白邊距 */
+  box-sizing: border-box; /* padding 不會改變總高度 */
+  height: 240px; /* 與其他卡片預設高度一致 */
+}
+.project-gallery .project-card .card-body {
+  padding: 6px 12px; /* 稍微縮小高度 */
+  text-align: center;
+  background: var(--card-accent); /* 使用主題色 */
+  height: 48px; /* 固定文字區高度，讓三張卡片下方一致 */
+  box-sizing: border-box; /* 確保 padding 不會改變總高度，維持一致 */
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.1);
-  transition: background 0.3s ease;
-  padding-bottom: 1rem;
-  z-index: 1;
 }
-.project-gallery .project-card .project-title {
-  font-size: 1.25rem;
-  font-weight: bold;
+.project-gallery .project-card .card-text {
   margin: 0;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* ← 陰影效果 */
+  color: var(--card-text-color); /* 更協調的淺米色文字 */
+  font-weight: 700;
+  font-size: 0.95rem;
 }
+/* 單行省略，避免文字換行造成不同高度 */
+.project-gallery .project-card .card-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+.project-gallery .project-card .overlay { display: none; }
+
+.project-title {
+  text-align: center;
+  color: #111;
+  font-weight: 700;
+  font-size: 0.98rem;
+  background-color: #ffffff; /* 白底 */
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.project-title a { color: inherit; text-decoration: none; }
+.project-title a:hover { text-decoration: underline; }
+
+/* 小螢幕讓標題寬度適中並靠中 */
+@media (max-width: 576px) {
+  .project-title { display: block; width: calc(100% - 2rem); margin-left: 1rem; margin-right: 1rem; }
+}
+
+/* 讓 project-card 高度由內容決定（移除固定高度，避免圖片或文字被裁切） */
+.project-gallery .project-card { height: auto; }
+.project-card--logo { }
+@media (max-width: 576px) {
+  .project-gallery .project-card .card-img-top { height: 200px; }
+  .project-gallery .project-card .card-body { padding: 10px; }
+}
+@media (min-width: 768px) {
+  .project-gallery .project-card .card-img-top { height: 300px; }
+}
+
+/* RWD 調整：讓卡片在小螢幕較小、居中且間距合理 */
+@media (max-width: 576px) {
+  .project-gallery .project-card {
+    max-width: 520px; /* 限制最大寬度，避免看起來太大 */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+  }
+  .project-gallery .project-card .card-img-top { height: 140px; }
+  .project-gallery .project-card .card-body { padding: 8px; }
+  .project-gallery .project-card .card-text { font-size: 0.9rem; }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+  /* 平板：適中高度與較小陰影 */
+  .project-gallery .project-card { max-width: none; margin-bottom: 1.25rem; }
+  .project-gallery .project-card .card-img-top { height: 200px; }
+  .project-gallery .project-card .card-body { padding: 10px; }
+  .project-gallery .project-card .card-text { font-size: 0.95rem; }
+}
+/* 聯絡區：白色半透明卡片內文字改為深灰色 */
+#contactme .p-4 {
+  color: #333333 !important;
+}
+#contactme .p-4 a {
+  color: #333333 !important;
+}
+#contactme .p-4 .bi {
+  color: #333333 !important;
+  opacity: 0.9;
+}
+#contactme .p-4 h3 {
+  color: #222 !important;
+}
+/* 讓整張卡片（含圖片與底部文字）成為一個完整可點擊區域，並在欄位內等高顯示 */
+.project-gallery .row > [class*="col-"] { display: flex; }
+.project-gallery .row > [class*="col-"] > a.text-decoration-none { display: flex; flex-direction: column; width: 100%; }
+.project-gallery .project-card { display: flex; flex-direction: column; flex: 1 1 auto; }
+.project-gallery .project-card .card-img-top { flex: 0 0 auto; }
+.project-gallery .project-card .card-body { flex: 0 0 auto; }
+
+/* 確保 a 元素沒有預設的文字顏色影響，並完整覆蓋卡片 */
+.project-gallery a.text-decoration-none { color: inherit; }
+
+@media (max-width: 576px) {
+  .project-gallery .row > [class*="col-"] { display: block; }
+  .project-gallery .row > [class*="col-"] > a.text-decoration-none { display: block; }
+}
+/* SVG 專屬：確保 logo 卡片在各斷點與其他卡片保持同高度 */
+@media (max-width: 576px) {
+  .project-gallery .project-card .card-img-top[src$="繡莊logo.svg"] { height: 140px; padding: 12px; }
+}
+@media (min-width: 577px) and (max-width: 991px) {
+  .project-gallery .project-card .card-img-top[src$="繡莊logo.svg"] { height: 200px; }
+}
+@media (min-width: 768px) {
+  .project-gallery .project-card .card-img-top[src$="繡莊logo.svg"] { height: 300px; padding: 18px; }
+}
+/* 移除舊有 project-title 內嵌樣式（使用 card-text / project-title class） */
 
 .timeline {
   position: relative;
@@ -336,10 +564,12 @@ html {
 
 .contact-box-section {
   position: relative;
-  background-image: url("../pic/bg3.jpg");
-  background-size: cover;
+  /* 改為深灰半透明底，移除背景圖片 */
+  background-image: none !important;
+  background-color: rgba(18,20,22,0.85);
+  background-size: none;
   background-position: center;
-  background-attachment: fixed; /* 視差效果 */
+  background-attachment: scroll;
   overflow: hidden;
 }
 .contact-box-section .contact-box-inner label {
@@ -349,18 +579,19 @@ html {
 .contact-box-section .contact-box-section-overlay {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-@media (max-width: 768px) {
+  /* 移除背景圖片，改為深灰半透明底色（避免與 footer 出現縫隙） */
+  background-image: none !important;
+  background-color: rgba(18,20,22,0.85);
+  background-size: none;
+  background-position: center;
+  background-attachment: scroll;
+  overflow: hidden;
   .contact-box-section {
-    background-image: url("../pic/bg3.jpg");
+    background-image: none !important;
     background-attachment: scroll;
   }
   .contact-box-section .contact-box-section-overlay {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: transparent !important;
   }
 }
 
@@ -371,8 +602,46 @@ html {
   border-radius: 20px;
 }
 
+/* 聯絡區：表單在深灰底上顯示白色文字與淡色輸入框 */
+.contact-box-section form .form-label {
+  color: #fff !important;
+}
+.contact-box-section form .form-control {
+  background-color: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.15);
+  color: #fff;
+}
+.contact-box-section form .form-control::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+.contact-box-section .btn.btn-light {
+  background-color: rgba(255,255,255,0.08);
+  color: #fff;
+  border-color: rgba(255,255,255,0.12);
+}
+/* checkbox 標籤顏色 */
+.contact-box-section .form-check-label {
+  color: #fff !important;
+}
+
+/* 左側介紹文：加粗處理 */
+.contact-box-section .p-4 p.h6 {
+  font-weight: 700;
+}
+
 .footer-custom {
   background-color: #1C1F22;
+}
+
+/* 修正 footer 與上一個區塊之間可能的預設間距 */
+.footer-custom {
+  margin-top: 0;
+  padding-top: 0.5rem; /* 保留一點內距讓內容不貼邊 */
+}
+
+/* 確保 contact 區塊在結尾沒有多餘 margin，讓 footer 貼齊 */
+.contact-box-section, .contact-box-section > .contact-box-inner {
+  margin-bottom: 0;
 }
 
 .custom-link {
@@ -13105,5 +13374,40 @@ textarea.form-control-lg {
   }
   .d-print-none {
     display: none !important;
+  }
+}
+/* 桌面：為 project 欄位恢復間距（處理 HTML 上使用了 px-md-0 導致的無間距情況） */
+@media (min-width: 768px) {
+  .project-gallery .row {
+    margin-left: -0.75rem; /* 與下方欄位 padding 配合形成 gutter */
+    margin-right: -0.75rem;
+  }
+  .project-gallery .row > [class*="col-"] {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+/* 補強：在桌面使用 flex gap 並覆蓋 px-md-0 工具類，確保卡片間出現間隔 */
+@media (min-width: 768px) {
+  .project-gallery .row {
+    gap: 0 1.5rem; /* column gap */
+  }
+  /* 如果欄位上有 px-md-0，強制還原左右 padding 以確保外觀一致 */
+  .project-gallery .row > [class*="col-"] { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
+  .project-gallery .row > [class*="col-"].px-md-0 { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
+}
+
+/* 大螢幕（桌機）：強制三欄等寬，考量 gap 的空間 */
+@media (min-width: 992px) {
+  .project-gallery .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 0 1.5rem;
+  }
+  .project-gallery .row > .col-md-4 {
+    flex: 0 0 calc((100% - 2 * 1.5rem) / 3);
+    max-width: calc((100% - 2 * 1.5rem) / 3);
   }
 }

@@ -1,366 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>personal.resume</title>
-    <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>personal.resume</title>
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Noto+Sans+TC:wght@400;700&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
+
 <body>
-    
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          
-          <!-- 左：LOGO（桌面顯示） -->
-          <a class="navbar-brand d-none d-lg-block" href="#">HANNAH</a>
-      
-          <!-- 左：LOGO（手機顯示） -->
-          <a class="navbar-brand d-lg-none" href="#">HANNAH</a>
-      
-          <!-- 手機版的漢堡按鈕 -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-      
-          <!-- 導覽列 -->
-          <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-            <div class="navbar-nav nav-center">
-              <a class="nav-link" href="#professional">PROFESSIONAL</a>
-              <a class="nav-link" href="#portfolio">PORTFOLIO</a>
-              <a class="nav-link" href="#timeline">EXPERIENCE</a>
-            </div>
-          </div>
-      
-        </div>
-    </nav>
-    
-    <header class="min-vh-100 position-relative header-banner">
-        <div class="deco-box position-absolute top-0 start-0"></div>
-        <div class="deco-box position-absolute bottom-0 end-0"></div>
-        <div class="overlay"></div><!-- 透明濾鏡 -->
-        <!-- 主要文字 -->
-        <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
-          <h1 class="hero-title-ch display-1 ">黃 鈺晰</h1>
-          <hr class="mb-3 border-3 opacity-60 mx-n5">
-          <h2 class="hero-title-en">YU-HSI HUANG</h2>
-          <p class="hero-subtext" data-aos="zoom-in">人生就像網頁，內容將不斷翻新。</p>
-        </div>
-    </header>
-      
-    <div class="parallax-section position-relative">
-        <div class="overlay"></div>
-        <div class="container  position-relative">
-          <div class="row justify-content-center flex-md-row-reverse gy-4 gx-8 ">
-            <div class="col-md-3  d-flex justify-content-center align-items-center">
-              <img src="pic/person.jpg.jpg" alt="" class="img-fluid " style="max-width: 250px; height: auto;" data-aos="fade-in">
-            </div>
-            <div class="col-md-5 d-flex align-items-center text-white "data-aos="fade-up">
-              <div>
-                <h2 class="display-4"><strong>ABOUT ME</strong></h2>
-                <p>嗨，我是 Hannah，一位熱愛視覺與互動之間平衡的前端設計學習者。設計出能讓人停下來感受的作品，始終讓我著迷，這份熱情推動我不斷深入學習、探索。我選擇跳脫熟悉的環境，投入前端網頁設計的世界，享受創造與實作帶來的每一次挑戰與成就感。</p>
-                <p>我喜歡觀察生活中的美感，也熱衷把這份感受轉化成畫面與體驗。
-                    現在的我，正一邊學習技術，一邊嘗試用每個小作品記錄這段旅程。<hr>
-                    這裡，是我邊走邊創作的地方，歡迎你一起感受我的設計節奏。</p>
-                <a href="#contactme" class="btn btn-outline-light mt-4 w-100" >CONTACT ME</a>
-              </div>
-            </div>
-          </div>
 
-          <div class="section-gap" id="professional" >
-            <h2 class="display-5 text-center text-white fw-bold" data-aos="zoom-in" >PROFESSIONAL</h2>
-            <p class="text-center text-white">MY KNOWLEDGE LEVEL IN SOFTWARE</p>
-          </div>
-          <div class="skill-container mt-2 px-5">
-            <div class="skill">
-              <span>HTML5</span>
-              <div class="bar"><div class="fill" data-width="90%" >90%</div></div>
-            </div>
-            <div class="skill">
-              <span>CSS3</span>
-              <div class="bar"><div class="fill" data-width= "85%">85%</div></div>
-            </div>
-            <div class="skill">
-              <span>jQuery 動畫</span>
-              <div class="bar"><div class="fill" data-width= "60%">60%</div></div>
-            </div>
-            <div class="skill">
-              <span>PHOTOSHOP</span>
-              <div class="bar"><div class="fill" data-width= "80%">80%</div></div>
-            </div>
-            <div class="skill">
-              <span>RWD 響應式設計</span>
-              <div class="bar"><div class="fill" data-width= "85%">85%</div></div>
-            </div>
-            <div class="skill">
-              <span>Bootstrap5</span>
-              <div class="bar"><div class="fill" data-width= "95%">95%</div></div>
-            </div>
-            <div class="skill">
-              <span>AOS 滾動動畫</span>
-              <div class="bar"><div class="fill" data-width= "85%">85%</div></div>
-            </div>
-            <div class="skill">
-              <span>Git 基礎版控</span>
-              <div class="bar"><div class="fill" data-width= "80%">80%</div></div>
-            </div>
-            <div class="skill">
-              <span>網頁切版實作</span>
-              <div class="bar"><div class="fill" data-width= "85%">85%</div></div>
-            </div>
-          </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+
+      <!-- 左：LOGO（桌面顯示） -->
+      <a class="navbar-brand d-none d-lg-block" href="#">HANNAH</a>
+
+      <!-- 左：LOGO（手機顯示） -->
+      <a class="navbar-brand d-lg-none" href="#">HANNAH</a>
+
+      <!-- 手機版的漢堡按鈕 -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- 導覽列 -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+        <div class="navbar-nav nav-center">
+          <a class="nav-link" href="#professional">PROFESSIONAL</a>
+          <a class="nav-link" href="#portfolio">PORTFOLIO</a>
+          <a class="nav-link" href="#timeline">EXPERIENCE</a>
         </div>
+      </div>
+
     </div>
-   
-    <section class="project-gallery text-white" id="portfolio">
-      <div class="bg-img-overlay"></div>
-      <div class="container-fluid content-on-top">
+  </nav>
 
-        <div class="container py-3 py-md-5 position-relative" style="z-index: 4;">
-          <div class="text-center">
-            <h2 class="display-4 fw-bold text-glow mb-2" data-aos="zoom-in">PORTFOLIO</h2>
-            <p class="lead text-glow mb-0" data-aos="zoom-in">A portfolio shaped by passion and practice.</p>
+  <header class="min-vh-100 position-relative header-banner">
+    <div class="deco-box position-absolute top-0 start-0"></div>
+    <div class="deco-box position-absolute bottom-0 end-0"></div>
+    <div class="overlay"></div><!-- 透明濾鏡 -->
+    <!-- 主要文字 -->
+    <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+      <h1 class="hero-title-ch display-1 ">黃 鈺晰</h1>
+      <hr class="mb-3 border-3 opacity-60 mx-n5">
+      <h2 class="hero-title-en">YU-HSI HUANG</h2>
+      <p class="hero-subtext" data-aos="zoom-in">人生就像網頁，內容將不斷翻新。</p>
+    </div>
+  </header>
+
+  <div class="parallax-section position-relative">
+    <div class="overlay"></div>
+    <div class="container  position-relative">
+      <div class="row justify-content-center flex-md-row-reverse gy-4 gx-8 ">
+        <div class="col-md-3  d-flex justify-content-center align-items-center">
+          <img src="pic/person.jpg.jpg" alt="" class="img-fluid " style="max-width: 250px; height: auto;"
+            data-aos="fade-in">
+        </div>
+        <div class="col-md-5 d-flex align-items-center text-white" data-aos="fade-up">
+          <div>
+            <h2 class="display-4"><strong>ABOUT ME</strong></h2>
+            <p>
+              嗨，我是 Hannah，一名前端工程師，專注於打造兼具視覺與功能性的網站體驗。
+              具備 Angular 與 React 開發經驗，熟悉 TypeScript、RESTful API 串接，以及後台系統介面開發。
+              曾參與企業級專案，負責表單邏輯、資料處理與 UI 元件整合，具備實務開發與除錯能力。
+            </p>
+            <p>
+              我擅長將設計思維轉化為實際互動，讓畫面不只是好看，更具備良好的使用體驗與結構邏輯。
+              持續精進前端技術的同時，也重視程式架構與可維護性，期望打造穩定且具有延展性的產品。
+              <hr>
+              這裡，是我將設計與工程結合的作品集。
+            </p>
+            <a href="#contactme" class="btn btn-outline-light mt-4 w-100">CONTACT ME</a>
           </div>
         </div>
 
-      </div>
-      <div class="container position-relative" style="z-index: 2;">
-        <div class="row g-0 pb-4 pb-md-5">
+        <div class="section-gap" id="professional">
+          <h2 class="display-5 text-center text-white fw-bold" data-aos="zoom-in">PROFESSIONAL</h2>
+          <p class="text-center text-white">MY KNOWLEDGE LEVEL IN SOFTWARE</p>
+        </div>
+        <div class="skill-container mt-2 px-5">
+          <div class="skill">
+            <span>HTML5 / CSS3 / SCSS</span>
+            <div class="bar">
+              <div class="fill" data-width="90%">90%</div>
+            </div>
+          </div>
 
-          <div class="col-md-4 px-3 px-md-0">
-            <a href="https://guangcaiart.com.tw/" target="_blank" class="text-decoration-none">
-              <div class="project-card" style="background-image: url('pic/card1.jpg.jpg');">
-                <div class="overlay d-flex align-items-center justify-content-center">
-                  <h5 class="project-title mb-0 text-light" >
-                    台南府城光彩繡莊
-                  </h5>
+          <div class="skill">
+            <span>JavaScript (ES6+)</span>
+            <div class="bar">
+              <div class="fill" data-width="80%">80%</div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span>TypeScript</span>
+            <div class="bar">
+              <div class="fill" data-width="85%">85%</div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span>Angular（Reactive Forms / RxJS）</span>
+            <div class="bar">
+              <div class="fill" data-width="90%">90%</div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span>React（Hooks / Router）</span>
+            <div class="bar">
+              <div class="fill" data-width="75%">75%</div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span>PrimeNG / PrimeReact（DataTable / UI）</span>
+            <div class="bar">
+              <div class="fill" data-width="85%">85%</div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span>RESTful API / Axios / HttpClient</span>
+            <div class="bar">
+              <div class="fill" data-width="85%">85%</div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span>Node.js + Express</span>
+            <div class="bar">
+              <div class="fill" data-width="70%">70%</div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span>Git / GitHub</span>
+            <div class="bar">
+              <div class="fill" data-width="85%">85%</div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>CI/CD</span>
+            <div class="bar">
+              <div class="fill" data-width="85%">85%</div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>RWD / Bootstrap 5</span>
+            <div class="bar">
+              <div class="fill" data-width="90%">90%</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="project-gallery text-white" id="portfolio">
+          <div class="bg-img-overlay"></div>
+          <div class="container-fluid content-on-top">
+
+            <div class="container py-3 py-md-5 position-relative">
+              <div class="text-center">
+                <h2 class="display-4 fw-bold text-glow mb-2" data-aos="zoom-in">PORTFOLIO</h2>
+                <p class="lead text-glow mb-0" data-aos="zoom-in">A portfolio shaped by passion and practice.</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="container position-relative">
+            <div class="row g-3 pb-4 pb-md-5">
+
+              <div class="col-md-4 px-3 px-md-0">
+                <a href="https://guangcaiart.com.tw/" target="_blank" class="text-decoration-none d-block">
+                  <div class="card project-card">
+                    <img src="pic/繡莊logo.svg" class="card-img-top" alt="台南府城光彩繡莊">
+                    <div class="card-body">
+                      <p class="card-text">台南府城光彩繡莊</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-md-4 px-3 px-md-0">
+                <a href="https://hannah630.github.io/Espresso/" target="_blank" class="text-decoration-none d-block">
+                  <div class="card project-card project-card--dark">
+                    <img src="pic/yoyi.png" class="card-img-top" alt="研磨壓萃咖啡 - 佑奕設計">
+                    <div class="card-body">
+                      <p class="card-text">研磨壓萃咖啡 - 佑奕設計</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4 px-3 px-md-0">
+                <a href="https://hannah630.github.io/react-primereact-dashboard/" target="_blank"
+                  class="text-decoration-none d-block">
+                  <div class="card project-card">
+                    <img src="pic/REACT.jpg" class="card-img-top" alt="React × PrimeReact 控制台">
+                    <div class="card-body">
+                      <p class="card-text">React × PrimeReact 控制台</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="content py-2" id="timeline">
+            <h2 class="text-center display-4 mb-3 fw-bold text-glow" data-aos="fade-up"
+              style="position: relative; z-index: 4;">EXPERIENCE
+            </h2>
+            <div class="timeline">
+              <!-- 一筆工作經驗 -->
+              <div class="timeline-item left" data-aos="fade-right" data-aos-delay="0">
+                <div class="timeline-content">
+                  <h5 class="text-white">2018– 2020</h5>
+                  <h4>Senior High School</h4>
+                  <p class="mb-1 ">國立員林崇實高工-室內空間設計科</p>
+                  <p>高中就讀室內空間設計科，培養了我對設計邏輯與美感的基礎認知。透過模型製作、製圖與簡報訓練，我學會從使用者角度思考空間與視覺溝通，同時熟悉 Photoshop、Illustrator、SketchUp
+                    等設計工具，奠定了設計的核心能力。 </p>
                 </div>
               </div>
-            </a>
-          </div>
-          
-          <div class="col-md-4 px-3 px-md-0">
-            <a href="https://hannah630.github.io/Espresso/" target="_blank" class="text-decoration-none">
-            <div class="project-card" style="background-image: url('pic/card2.png');">
-              <div class="overlay d-flex align-items-center justify-content-center">
-                <h5 class="project-title  mb-0 text-light">研磨壓萃咖啡-佑奕設計</h5>
+
+              <div class="timeline-item right" data-aos="fade-left" data-aos-delay="50">
+                <div class="timeline-content">
+                  <h5 class="text-white">2020 – 2024</h5>
+                  <h4>UnderGraduate Degree</h4>
+                  <p class="mb-1">國立臺北科技大學-文化事業發展系</p>
+                  <p>
+                    就讀文化事業發展系期間，接觸品牌企劃、行銷策略與內容轉化等多元課程，培養了跨領域的溝通與提案能力。除了具備文化創意與策展視角，也熟悉簡報設計與基礎視覺排版，為我後續進入UI/前端設計領域打下整合性思維的基礎。
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item  left" data-aos="fade-left" data-aos-delay="150">
+                <div class="timeline-content">
+                  <h5 class="text-white">2023 – 2024</h5>
+                  <h4>InternShip</h4>
+                  <p class="mb-1">美力絲國際企劃股份有限公司</p>
+                  <p>擔任行銷實習生，參與品牌企劃與社群內容撰寫，並協助執行校外活動與專案規劃，實踐行銷策略與品牌溝通的實務經驗。</p>
+                </div>
+              </div>
+
+              <div class="timeline-item right" data-aos="fade-right" data-aos-delay="200">
+                <div class="timeline-content">
+                  <h5 class="text-white">2024 – 2025</h5>
+                  <h4>Web Design</h4>
+                  <p class="mb-1">網頁前端設計</p>
+                  <p>過去在空間與美學設計中培養細膩觀察與構圖能力，現在延伸至網頁前端設計，透過 HTML/CSS 與互動效果打造視覺與使用者體驗兼具的網頁作品。 </p>
+                </div>
+              </div>
+              <div class="timeline-item  left" data-aos="fade-right" data-aos-delay="100">
+                <div class="timeline-content">
+                  <h5 class="text-white">2025 – 2026</h5>
+                  <h4>Front-End Developer</h4>
+                  <p class="mb-1">精誠資訊股份有限公司（SYSTEX）</p>
+                  <p>
+                    於企業內部系統專案中擔任前端工程師，主要使用 Angular + TypeScript 開發大型後台系統。
+                    負責建立與維護 Reactive Forms 表單邏輯、串接 RESTful API，並實作多種資料表格功能（分頁、排序、CRUD）。
+                    同時使用 PrimeNG 元件開發系統介面，並處理複雜資料呈現與使用者互動邏輯。
+                    在專案中累積模組化開發經驗，並提升除錯與系統整合能力。
+                  </p>
+                </div>
               </div>
             </div>
-          </a>
-        </div>
-          <div class="col-md-4 px-3 px-md-0">
-            <a href="https://hannah630.github.io/travel-website/" target="_blank" class="text-decoration-none">
-            <div class="project-card" style="background-image: url('pic/card3.png');">
-              <div class="overlay d-flex align-items-center justify-content-center">
-                <h5 class="project-title mb-0 text-light ">慢行所</h5>
+          </div>
+
+        </section>
+
+        <section class="contact-box-section py-5 position-relative">
+          <!-- 半透明遮罩層 -->
+          <div class="contact-box-section-overlay"></div>
+
+          <!-- 真正的內容區塊 -->
+          <div class="container position-relative z-2 contact-box-inner" style="max-width: 960px;" id="contactme">
+            <div class="text-center mb-4">
+              <h2 class="fw-bold display-5">CONTACT ME</h2>
+            </div>
+
+            <div class="row justify-content-center text-start row-cols-1 row-cols-lg-2 gy-5">
+              <!-- 左側聯絡資訊 -->
+              <div class="col-md-5" data-aos="fade-right">
+                <div class="p-4 rounded-4 shadow-sm" style="background-color: rgba(255, 255, 255, 0.75);">
+                  <p class="h6 pb-4">Got an idea?<br>Let’s talk. I promise I reply faster than your favorite app.</p>
+
+                  <div class="pb-4">
+                    <h3 class="h5">聯絡方式</h3>
+                    <ul class="list-unstyled h6 lh-base">
+                      <li><i class="bi bi-envelope me-2"></i>cc20010630@gmail.com</li>
+                      <li><i class="bi bi-telephone me-2"></i>0906200630</li>
+                    </ul>
+                  </div>
+
+                  <h3 class="h5">社群關注</h3>
+                  <ul class="list-unstyled h6 lh-base">
+                    <li><i class="bi bi-facebook me-2"></i><a href="#" class="text-dark text-decoration-none">黃鈺晰 YU-HSI
+                        HUANG</a></li>
+                    <li><i class="bi bi-instagram me-2"></i><a href="https://instagram.com/huyuhsi" target="_blank"
+                        class="text-dark text-decoration-none">@huyuhsi</a></li>
+                    <li><i class="bi bi-line me-2"></i>yo20170610（Line ID）</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- 右側表單 -->
+              <div class="col-md-5" data-aos="fade-left">
+                <form action="https://formsubmit.co/cc20010630@gmail.com" method="POST"
+                  class="needs-validation form-small" novalidate>
+                  <input type="hidden" name="_captcha" value="false">
+                  <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+
+                  <div class="row g-2">
+                    <div class="col-md-6">
+                      <label for="firstName" class="form-label">姓氏 *</label>
+                      <input type="text" class="form-control" name="firstName" id="firstName" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="lastName" class="form-label">名 *</label>
+                      <input type="text" class="form-control" name="lastName" id="lastName" required>
+                    </div>
+                    <div class="col-12 mb-3">
+                      <label for="email" class="form-label">Email address</label>
+                      <input type="email" class="form-control" name="email" id="email"
+                        placeholder="cc20010630@gmail.com" required>
+                    </div>
+                    <div class="col-12 mb-3">
+                      <label for="message" class="form-label">留言給我吧！</label>
+                      <textarea class="form-control" name="message" id="message" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3 form-check col-12">
+                      <input type="checkbox" class="form-check-input" id="checkMe">
+                      <label class="form-check-label" for="checkMe">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-light col-6">Submit</button>
+                  </div>
+                </form>
               </div>
             </div>
-          </a>
-        </div>
-      </div>
-      </div>
-      
-      
-      <div class="content py-2" id="timeline">
-        <h2 class="text-center display-4 mb-3 fw-bold text-glow" data-aos="fade-up" style="position: relative; z-index: 4;">EXPERIENCE
-        </h2>
-        <div class="timeline">
-          <!-- 一筆工作經驗 -->
-          <div class="timeline-item left" data-aos="fade-right" data-aos-delay="0">
-            <div class="timeline-content">
-              <h5 class="text-white">2018– 2020</h5>
-              <h4>Senior High School</h4>
-              <p class="mb-1 ">國立員林崇實高工-室內空間設計科</p>
-              <p>高中就讀室內空間設計科，培養了我對設計邏輯與美感的基礎認知。透過模型製作、製圖與簡報訓練，我學會從使用者角度思考空間與視覺溝通，同時熟悉 Photoshop、Illustrator、SketchUp 等設計工具，奠定了設計的核心能力。              </p>
-            </div>
           </div>
-        
-          <div class="timeline-item right" data-aos="fade-left" data-aos-delay="50">
-            <div class="timeline-content">
-              <h5 class="text-white">2020 – 2024</h5>
-              <h4>UnderGraduate Degree</h4>
-              <p class="mb-1">國立臺北科技大學-文化事業發展系</p>
-              <p>就讀文化事業發展系期間，接觸品牌企劃、行銷策略與內容轉化等多元課程，培養了跨領域的溝通與提案能力。除了具備文化創意與策展視角，也熟悉簡報設計與基礎視覺排版，為我後續進入UI/前端設計領域打下整合性思維的基礎。
-              </p>
-            </div>
-          </div>
-    
-          <div class="timeline-item left" data-aos="fade-right"data-aos-delay="100">
-            <div class="timeline-content">
-              <h5 class="text-white">2022– 2023</h5>
-              <h4>WORK SHOP</h4>
-              <p class="mb-1">經營個人美甲工作室</p>
-              <p>曾獨立經營個人美甲工作室，負責設計、預約管理與顧客溝通，累積豐富的審美與實作經驗，也培養了自我品牌經營與視覺呈現的敏感度。
-              </p>
-            </div>
+        </section>
+
+
+        <footer class="footer-custom d-flex justify-content-center align-items-center text-white  py-2 ">
+          <!-- 左側：Logo 或字母圈圈 -->
+          <div class="footer-logo d-flex align-items-center pe-3">
+            <div class="circle-logo">H</div>
           </div>
 
-          <div class="timeline-item right" data-aos="fade-left" data-aos-delay="150">
-            <div class="timeline-content">
-              <h5 class="text-white">2023 – 2024</h5>
-              <h4>InternShip</h4>
-              <p class="mb-1">美力絲國際企劃股份有限公司</p>
-              <p>擔任行銷實習生，參與品牌企劃與社群內容撰寫，並協助執行校外活動與專案規劃，實踐行銷策略與品牌溝通的實務經驗。</p>
-            </div>
+          <!-- 右側：文字 -->
+          <div class="footer-text small">
+            ©2025 Designed & Secured by Hannah Huang. </a>
           </div>
-
-          <div class="timeline-item left" data-aos="fade-right" data-aos-delay="200">
-            <div class="timeline-content">
-              <h5 class="text-white">2024 – 2025</h5>
-              <h4>Web Design</h4>
-              <p class="mb-1">網頁前端設計</p>
-              <p>過去在空間與美學設計中培養細膩觀察與構圖能力，現在延伸至網頁前端設計，透過 HTML/CSS 與互動效果打造視覺與使用者體驗兼具的網頁作品。              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-    </section>
-
-    <section class="contact-box-section py-5 position-relative">
-      <!-- 半透明遮罩層 -->
-      <div class="contact-box-section-overlay"></div>
-    
-      <!-- 真正的內容區塊 -->
-      <div class="container position-relative z-2 contact-box-inner" style="max-width: 960px;" id="contactme">
-        <div class="text-center mb-4">
-          <h2 class="fw-bold display-5">CONTACT ME</h2>
-        </div>
-    
-        <div class="row justify-content-center text-start row-cols-1 row-cols-lg-2 gy-5">
-          <!-- 左側聯絡資訊 -->
-          <div class="col-md-5" data-aos="fade-right">
-            <div class="p-4 rounded-4 shadow-sm" style="background-color: rgba(255, 255, 255, 0.75);">
-              <p class="h6 pb-4">Got an idea?<br>Let’s talk. I promise I reply faster than your favorite app.</p>
-    
-              <div class="pb-4">
-                <h3 class="h5">聯絡方式</h3>
-                <ul class="list-unstyled h6 lh-base">
-                  <li><i class="bi bi-envelope me-2"></i>cc20010630@gmail.com</li>
-                  <li><i class="bi bi-telephone me-2"></i>0906200630</li>
-                </ul>
-              </div>
-    
-              <h3 class="h5">社群關注</h3>
-              <ul class="list-unstyled h6 lh-base">
-                <li><i class="bi bi-facebook me-2"></i><a href="#" class="text-dark text-decoration-none">黃鈺晰 YU-HSI HUANG</a></li>
-                <li><i class="bi bi-instagram me-2"></i><a href="https://instagram.com/huyuhsi" target="_blank" class="text-dark text-decoration-none">@huyuhsi</a></li>
-                <li><i class="bi bi-line me-2"></i>yo20170610（Line ID）</li>
-              </ul>
-            </div>
-          </div>
-    
-          <!-- 右側表單 -->
-          <div class="col-md-5" data-aos="fade-left">
-            <form action="https://formsubmit.co/cc20010630@gmail.com" method="POST" class="needs-validation form-small" novalidate>
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
-    
-              <div class="row g-2">
-                <div class="col-md-6">
-                  <label for="firstName" class="form-label">姓氏 *</label>
-                  <input type="text" class="form-control" name="firstName" id="firstName" required>
-                </div>
-                <div class="col-md-6">
-                  <label for="lastName" class="form-label">名 *</label>
-                  <input type="text" class="form-control" name="lastName" id="lastName" required>
-                </div>
-                <div class="col-12 mb-3">
-                  <label for="email" class="form-label">Email address</label>
-                  <input type="email" class="form-control" name="email" id="email" placeholder="cc20010630@gmail.com" required>
-                </div>
-                <div class="col-12 mb-3">
-                  <label for="message" class="form-label">留言給我吧！</label>
-                  <textarea class="form-control" name="message" id="message" rows="3"></textarea>
-                </div>
-                <div class="mb-3 form-check col-12">
-                  <input type="checkbox" class="form-check-input" id="checkMe">
-                  <label class="form-check-label" for="checkMe">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-dark col-6">Submit</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    
-    <footer class="footer-custom d-flex justify-content-center align-items-center text-white  py-2">
-      <!-- 左側：Logo 或字母圈圈 -->
-      <div class="footer-logo d-flex align-items-center pe-3">
-        <div class="circle-logo">H</div>
-      </div>
-    
-      <!-- 右側：文字 -->
-      <div class="footer-text small">
-        ©2025 Designed & Secured by Hannah Huang. </a>
-      </div>
-    </footer>
-    
-   
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        </footer>
 
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  // ✅ 初始化 AOS，只播放一次動畫
-  AOS.init({
-    once: true,           // ✔️ 滾動只播放一次
-    duration: 1500,       // ✔️ 動畫持續時間（ms）
-    easing: 'ease-in-out' // ✔️ 動畫節奏（可選）
-  });
-</script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<!-- 自訂的腳本 -->
-<script>
-  (function () {
-    'use strict';
 
-    // ✅ Bootstrap 表單驗證
-    var forms = document.querySelectorAll('.needs-validation');
-    Array.prototype.slice.call(forms).forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  })();
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+          // 初始化 AOS，只播放一次動畫
+          AOS.init({
+            once: true,           // 滾動只播放一次
+            duration: 1500,       // 動畫持續時間（ms）
+            easing: 'ease-in-out' // 動畫節奏（可選）
+          });
+        </script>
 
-  // ✅ 檢查元素是否在畫面中
-  function isInViewport(element) {
-    const top = $(element).offset().top;
-    const bottom = top + $(element).outerHeight();
-    const scrollTop = $(window).scrollTop();
-    const windowHeight = $(window).height();
-    return bottom > scrollTop && top < (scrollTop + windowHeight);
-  }
+        <!-- 自訂的腳本 -->
+        <script>
+          (function () {
+            'use strict';
 
-  // ✅ 技能條動畫（只播放一次）
-  $(window).on('scroll load', function () {
-    $('.fill').each(function () {
-      const $this = $(this);
-      const width = $this.data('width');
+            // Bootstrap 表單驗證
+            var forms = document.querySelectorAll('.needs-validation');
+            Array.prototype.slice.call(forms).forEach(function (form) {
+              form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          })();
 
-      // 如果在畫面中且尚未播放過動畫
-      if (isInViewport($this) && !$this.hasClass('animated')) {
-        $this.css({
-          transition: 'width 1s ease',
-          width: width
-        });
-        $this.addClass('animated'); // 標記為已播放
-      }
-    });
-  });
-</script>
+          //  檢查元素是否在畫面中
+          function isInViewport(element) {
+            const top = $(element).offset().top;
+            const bottom = top + $(element).outerHeight();
+            const scrollTop = $(window).scrollTop();
+            const windowHeight = $(window).height();
+            return bottom > scrollTop && top < (scrollTop + windowHeight);
+          }
+
+          //  技能條動畫（只播放一次）
+          $(window).on('scroll load', function () {
+            $('.fill').each(function () {
+              const $this = $(this);
+              const width = $this.data('width');
+
+              // 如果在畫面中且尚未播放過動畫
+              if (isInViewport($this) && !$this.hasClass('animated')) {
+                $this.css({
+                  transition: 'width 1s ease',
+                  width: width
+                });
+                $this.addClass('animated'); // 標記為已播放
+              }
+            });
+          });
+        </script>
 
 </body>
+
 </html>

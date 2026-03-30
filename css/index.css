@@ -156,10 +156,9 @@ html {
   align-items: center;
   gap: 1rem;
   margin-bottom: 15px;
-  flex-wrap: wrap;
 }
 .skill-container .skill span {
-  min-width: 120px;
+ width: 260px; 
   font-weight: bold;
   font-size: 14px;
 }
@@ -182,7 +181,20 @@ html {
   border-radius: 5px;
   color: #5a4333;
 }
+@media (max-width: 768px) {
+  .skill-container .skill {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
+  .skill-container .skill span {
+    width: 100%;
+  }
+
+  .skill-container .skill .bar {
+    width: 100%;
+  }
+}
 .project-gallery {
   position: relative;
   background-image: url("../pic/bg2.jpg");
@@ -336,10 +348,12 @@ html {
 
 .contact-box-section {
   position: relative;
-  background-image: url("../pic/bg3.jpg");
-  background-size: cover;
+  /* 改為深灰半透明底，移除背景圖以避免與 footer 出現縫隙 */
+  background-image: none !important;
+  background-color: rgba(18,20,22,0.85);
+  background-size: none;
   background-position: center;
-  background-attachment: fixed; /* 視差效果 */
+  background-attachment: scroll;
   overflow: hidden;
 }
 .contact-box-section .contact-box-inner label {
@@ -356,11 +370,11 @@ html {
 }
 @media (max-width: 768px) {
   .contact-box-section {
-    background-image: url("../pic/bg3.jpg");
+    background-image: none !important;
     background-attachment: scroll;
   }
   .contact-box-section .contact-box-section-overlay {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: transparent !important;
   }
 }
 
